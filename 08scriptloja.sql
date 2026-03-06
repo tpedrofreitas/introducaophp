@@ -1,3 +1,6 @@
+CREATE DATABASE loja;
+USE loja;
+
 CREATE TABLE produtos (
  
     id int auto_increment primary key ,
@@ -12,4 +15,4 @@ VALUES
      (2, 'Calça','59.90','5'),
      (3, 'Tênis','500.00','2');
 
-SELECT nome,preco,estoque FROM podutos;
+SELECT nome,preco,estoque FROM produtos;
