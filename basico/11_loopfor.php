@@ -5,11 +5,14 @@
         <meta charset="UTF-8">
         <title>Curso de PHP</title>
     </head>
-    <body>
+    <body>       
         
-        <p>
-            Olá, hoje é dia 09/03/2026
-        </p>
+        <?php 
+            for($i = 1; $i <= 10; $i++){
+                echo "$i<br>";
+            }
+        ?>
+        
     </body>
 
  </html>
