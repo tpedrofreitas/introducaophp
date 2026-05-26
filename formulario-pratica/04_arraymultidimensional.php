@@ -1,20 +1,28 @@
 <?php
+    if (isset($_POST['btn_gerar'])) {
+    
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $estados = [
+        ["uf" => $_POST['uf1'], "nome" => $_POST['nome1']],
+        ["uf" => $_POST['uf2'], "nome" => $_POST['nome2']],
+        ["uf" => $_POST['uf3'], "nome" => $_POST['nome3']],
+        ["uf" => $_POST['uf4'], "nome" => $_POST['nome4']]
+    ];
 
-    $ufs = $_POST['uf'];
-    $nomes = $_POST['nome'];
+    echo "<h2>Estados Cadastrados:</h2>";
+    echo "<table border='1' cellpadding='10'>";
+    echo "<tr><th>UF</th><th>Nome do Estado</th></tr>";
 
-    for ($i = 0; $i < 5; $i++) {
-
-        if (!empty($ufs[$i]) && !empty($nomes[$i])) {
-
-            echo strtoupper($ufs[$i]) . " - " . strtoupper($nomes[$i]) . "<br>";
-        }
+    // O foreach percorre o array 
+    foreach ($estados as $est) {
+        echo "<tr>";
+        echo "<td>" . htmlspecialchars($est['uf']) . "</td>";
+        echo "<td>" . htmlspecialchars($est['nome']) . "</td>";
+        echo "</tr>";
     }
+    echo "</table>";
 
-} else {
-    echo "Acesse pelo formulário!";
+    echo "<br><a href='04_arraymultidimensional.html'>Voltar para cadastrar mais</a>";
 }
 
 ?>

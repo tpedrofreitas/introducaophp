@@ -1,23 +1,25 @@
 <!DOCTYPE html>
-<html>
+    <html lang="pt-br">
 <head>
-    <title>Estados</title>
+    <meta charset="UTF-8">
+    <title>Cadastrar Estados</title>
 </head>
 <body>
-
-<h2>Digite até 5 estados</h2>
-
-<form action="04_arraymultidimensional.php" method="post">
-
-    UF: <input name="uf[]"> Nome: <input name="nome[]"><br><br>
-    UF: <input name="uf[]"> Nome: <input name="nome[]"><br><br>
-    UF: <input name="uf[]"> Nome: <input name="nome[]"><br><br>
-    UF: <input name="uf[]"> Nome: <input name="nome[]"><br><br>
-    UF: <input name="uf[]"> Nome: <input name="nome[]"><br><br>
-
-    <input type="submit" value="Enviar">
-
-</form>
-
+    <h2>Digite 4 Estados e suas UFs</h2>
+    <form action="04_arraymultidimensional.php" method="POST">
+        <input type="text" name="uf1" placeholder="UF 1" maxlength="2" required>
+        <input type="text" name="nome1" placeholder="Nome do Estado 1" required><br><br>
+ 
+        <input type="text" name="uf2" placeholder="UF 2" maxlength="2" required>
+        <input type="text" name="nome2" placeholder="Nome do Estado 2" required><br><br>
+ 
+        <input type="text" name="uf3" placeholder="UF 3" maxlength="2" required>
+        <input type="text" name="nome3" placeholder="Nome do Estado 3" required><br><br>
+ 
+        <input type="text" name="uf4" placeholder="UF 4" maxlength="2" required>
+        <input type="text" name="nome4" placeholder="Nome do Estado 4" required><br><br>
+ 
+        <button type="submit" name="btn_gerar">Gerar Lista</button>
+    </form>
 </body>
 </html>
